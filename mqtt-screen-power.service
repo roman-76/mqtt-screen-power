@@ -1,0 +1,13 @@
+[Unit]
+Description= MQTT screen power service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /home/pi/mqtt-screen-power/main.py
+User=pi
+Restart=Always
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
